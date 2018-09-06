@@ -6,7 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         {% if theme.favicon %}<link rel="icon" href="{{ url_for(theme.favicon) }}">{% endif %}
         <title>{{ (page.title + " - " + config.title) if page.title else config.title }}</title>
-        <meta name="description" content="{{ page.description if page.description else config.description }}">
+        <meta name="description" content="{{ page.excerpt | striptags if page.excerpt else config.description }}">
         <meta name="author" content="{{ config.author }}">
         <meta name="keywords" content="{{ (page.keywords + "," + config.keywords) if page.keywords else config.keywords }}">
         <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{ url_for(theme.feed) }}" />

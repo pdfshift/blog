@@ -5,11 +5,9 @@ categories:
 date: 2018-06-15 15:09:08
 thumbnail: /content/2018/06/15/mail.png
 keyword: mrr, recuring, revenues
-description: The harsh reality of common, bootstrapped startups.
 ---
 *My project, [PDFShift](https://pdfshift.io), received it's first payment today, after long weeks of hard work and thoughts about pulling marketing ideas after the other. And this post is about this ; the true growth of startups.*
-
-![Email received from Stripe](/content/2018/06/15/mail.png)
+<!-- more --> 
 
 Sure thing, this title is awesome and ... surprising? at the same time!
 

@@ -2,5 +2,5 @@
         <meta name="twitter:card" content="summary">
         <meta name="twitter:site" content="@{{ theme.twitter.account }}">
         <meta name="twitter:title" content="{{ (page.title + " - " + config.title) if page.title else config.title }}">
-        <meta name="twitter:description" content="{{ page.description if page.description else config.description }}">
+        <meta name="twitter:description" content="{{ truncate(post.excerpt | striptags, {length: 150, separator: ' '}) if page.excerpt else config.description }}">
         <meta name="twitter:image" content="{{ url_for(page.thumbnail) if page.thumbnail else url_for(theme.favicon) }}">

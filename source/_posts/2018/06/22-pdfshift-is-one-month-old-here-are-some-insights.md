@@ -5,12 +5,11 @@ categories:
 date: 2018-06-22 15:10:49
 thumbnail: /content/2018/06/22/analytics.png
 keyword: statistics, first, month
-description: Some insights about our first running month.
 ---
 We officially launched [PDFShift](https://pdfshift.io) a month ago, on May 22, and it has been an incredible ride since then.
 
 So today, for its monthversary, I want to share with you the current state of the service, its growth and we are at right now. I'll also talk about objectives for the upcoming month, and hopefully, meet them!
-
+<!-- more --> 
 ## Visitors
 
 Maybe the first interesting thing to start talking about. We haven't made a big impact, nor got featured on big websites (ProductHunt, Hacker News, etc), but we had a pretty nice traffic still:

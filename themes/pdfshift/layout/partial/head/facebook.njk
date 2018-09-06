@@ -4,4 +4,4 @@
         <meta property="og:image" content="{{ url_for(theme.favicon) }}">
         <meta property="og:url" content="{{ page.permalink if page.permalink else config.url }}">
         <meta property="og:site_name" content="{{ config.title }}">
-        <meta property="og:description" content="{{ page.description if page.description else config.description }}">
+        <meta property="og:description" content="{{ truncate(post.excerpt | striptags, {length: 150, separator: ' '}) if page.excerpt else config.description }}">
