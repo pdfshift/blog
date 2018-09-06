@@ -1,0 +1,40 @@
+menu:
+  - name: Features
+    url: https://pdfshift.io/convert-html-to-pdf
+  - name: Documentation
+    url: https://pdfshift.io/documentation
+  - name: Pricing
+    url: https://pdfshift.io/pricing
+  - name: Blog
+    url: /
+    class: is-active
+  - name: FAQ
+    url: https://pdfshift.io/faq
+  - name: Get my free API Key
+    url: https://pdfshift.io/register
+    class: button
+
+favicon: https://pdfshift.io/static/img/favicons/android-chrome-256x256.png
+
+feed: /atom.xml
+
+googlefonts:
+  - "Montserrat"
+  - "Lora"
+
+google_analytics:
+
+twitter:
+  account: pdfshift
+  creator:
+  
+
+comment:
+  # false, disqus, netease or facebook
+  enable: disqus
+  # disqus user, netease productKey or facebook appid 
+  id: 
+  # [facebook only] plugin language 
+  lang: en_US
+  # [facebook only] number of posts per load
+  numposts: 10

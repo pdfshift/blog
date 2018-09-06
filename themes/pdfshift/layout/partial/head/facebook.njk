@@ -1,0 +1,7 @@
+        <meta property="og:title" content="{{ (page.title + " - " + config.title) if page.title else config.title }}">
+        <meta property="og:type" content="blog">
+        {% if page.thumbnail %}<meta property="og:image" content="{{ page.thumbnail }}">{% endif %}
+        <meta property="og:image" content="{{ url_for(theme.favicon) }}">
+        <meta property="og:url" content="{{ page.permalink if page.permalink else config.url }}">
+        <meta property="og:site_name" content="{{ config.title }}">
+        <meta property="og:description" content="{{ page.description if page.description else config.description }}">
