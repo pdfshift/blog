@@ -16,7 +16,7 @@ description:
 
 We worked hard to list all the things we can do to get a few upvotes and try to stay as high as possible on the list.
 
-Here's a list of tactics we are/will implement:
+Here's a list of tactics we are implementing/will implement:
 
  * [Prepare your ProductHunt page](#Prepare-your-ProductHunt-page)
  * [Write on communities](#Write-on-communities)
@@ -54,7 +54,7 @@ In our case, we plan to write to:
 One important thing to keep in mind is how you will reach out to these communities. Don't simply throw a "*We are on ProductHunt, please upvote!*".
 Too many - lazy - people do that and the result is that often, your post will be ignored.
 
-Instead, study how __each__ communities work, how each community handle various "ProductHunt release" posts and do your best to provide a great message specially crafted __for each community.__
+Instead, study how __each__ community work, how each community handles various "ProductHunt release" posts and do your best to provide a great message specially crafted __for each community.__
 
 Of course, this is more difficult, requires more work and time. But the result will be tremendous! You want your PH release to succeed? You got to work for it :)
 
@@ -68,7 +68,7 @@ There a few key reasons for that, but all points to one rule: __having a chat sy
 
 Here are a few reasons why you need to install a chat system for your PH release:
 
-### Your visitors doesn't understand exactly what you offer
+### Your visitors don't understand exactly what you offer
 
 It's highly possible that a few visitors clicked on your link because you where one of the firsts on PH, but don't have much clue about what you offer.
 By having a chat on your website, you will be ready to explain to your potential customer what you do and be there to help them along the way.
@@ -109,7 +109,7 @@ Granted, it's, again, more work, but one more time, the result can be gigantic s
 __Before the big day__: Like for the communities, do a list of key people you plan to reach out, and write a dedicated message for each.
 Send them the message the day of your release (or even the day before if that can help, depending on the situation).
 
-_This raise the discussion of working on your network. Even though I'm not personally a fan of spending all your nights networking, staying in touch with important people, creating new connections from time to time and helping each other is still an important role for your success._
+_This raises the discussion of working on your network. Even though I'm not personally a fan of spending all your nights networking, staying in touch with important people, creating new connections from time to time and helping each other is still an important role for your success._
 
 
 ## Write to your users

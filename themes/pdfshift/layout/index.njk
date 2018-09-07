@@ -5,7 +5,7 @@
         <div class="featured">
             <h4>Featured post</h4>
             <div>
-                {% set featured_post = site.posts.first() %}
+                {% set featured_post = site.posts.last() %}
                 <a href="{{ url_for(featured_post.path) }}" title="{{ featured_post.title }}">
                     {% if featured_post.thumbnail %}{{ image_tag(featured_post.thumbnail, {alt: featured_post.title}) }}{% endif %}
                     <h2>{{ featured_post.title }}</h2>
