@@ -112,4 +112,4 @@ autolinker:
   email: true
   tel: false
   twitter: true
-  hashtag: twitter
+  hashtag: null

@@ -4,10 +4,7 @@ thumbnail: /content/2018/09/06/producthunt.png
 keyword: 'preparation, producthunt, release'
 categories:
   - Startup Journey
-  - Customer Support
-  - Product
 date: 2018-09-06 16:33:58
-description:
 ---
 
 
