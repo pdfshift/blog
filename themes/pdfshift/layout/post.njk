@@ -17,7 +17,7 @@
         Written by
         <span itemprop="name">Cyril Nicodeme</span>
         on
-        <span><time datetime="{{ page.date }}" itemprop="dateCreated datePublished">{{ full_date(page.date, "MMM D, YYYY") }}</time></span>
+        <span><time datetime="{{ date_xml(page.date) }}" itemprop="dateCreated datePublished">{{ full_date(page.date, "MMM D, YYYY") }}</time></span>
          - 
         <span class="reading-time" itemprop="timeRequired">{{ readingTime(page.content, 'min read') }}</span>
     </div>
