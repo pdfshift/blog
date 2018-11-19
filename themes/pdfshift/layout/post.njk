@@ -12,10 +12,12 @@
     </div>
     {% endif %}
     <h1 itemprop="headline">{{ page.title }}</h1>
-    <div class="author" itemscope itemtype="http://schema.org/Person" itemprop="author">
+    <div class="author">
+        <span itemscope itemtype="http://schema.org/Person" itemprop="author">
         {{ image_tag('https://www.gravatar.com/avatar/27dd30e7355a2f2740b636da145c4903?s=256', {alt: "Cyril Nicodeme's avatar", itemprop: 'image'}) }}
         Written by
         <span itemprop="name">Cyril Nicodeme</span>
+        </span>
         on
         <span><time datetime="{{ date_xml(page.date) }}" itemprop="dateCreated datePublished">{{ full_date(page.date, "MMM D, YYYY") }}</time></span>
          - 
