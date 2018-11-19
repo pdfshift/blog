@@ -1,7 +1,7 @@
 {% extends 'partial/base.njk' %}
 
 {% block content %}
-<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
     <ul class="breadcrumb" itemprop="breadcrumb">
         <li><a href="{{ config.url }}" itemprop="name">Blog</a></li>
         <li><a href="{{ url_for(page.categories.first().path) }}" itemprop="name">{{ page.categories.first().name }}</a></li>
@@ -24,7 +24,7 @@
     {% if page.subtitle %}
     <h2 class="subtitle">{{ page.subtitle }}</h2>
     {% endif %}
-    <main itemprop="articleBody">
+    <main itemprop="articleBody" id="article-body">
         {{ page.content }}
     </main>
     <div class="pager" itemprop="pagination">
