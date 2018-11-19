@@ -57,7 +57,7 @@ All in all, it's difficult to say how many upvotes we got from all these posts b
 
 ### Writing emails to key people
 
-We sent about 7 emails to a few key people that could have been of great help on that day. All of them replied with awesome messages, a few of them shared the link with their network.
+We sent 7 emails to a few key people that could have been of great help on that day. All of them replied with awesome messages, a few of them shared the link with their network.
 This strategy was the longest to prepare (one email per person, crafted specifically) with a "lower" return over time invested, but worth the work too as they all were really helpful and cheerful.
 
 

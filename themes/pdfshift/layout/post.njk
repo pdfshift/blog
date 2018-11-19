@@ -1,33 +1,33 @@
 {% extends 'partial/base.njk' %}
 
 {% block content %}
-<article>
-    <ul class="breadcrumb">
-        <li><a href="{{ config.url }}">Blog</a></li>
-        <li><a href="{{ url_for(page.categories.first().path) }}">{{ page.categories.first().name }}</a></li>
+<article itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+    <ul class="breadcrumb" itemprop="breadcrumb">
+        <li><a href="{{ config.url }}" itemprop="name">Blog</a></li>
+        <li><a href="{{ url_for(page.categories.first().path) }}" itemprop="name">{{ page.categories.first().name }}</a></li>
     </ul>
     {% if page.thumbnail %}
     <div class="thumbnail">
-        {{ image_tag(page.thumbnail, {alt: page.title}) }}
+        {{ image_tag(page.thumbnail, {alt: page.title, itemprop: 'image'}) }}
     </div>
     {% endif %}
-    <h1>{{ page.title }}</h1>
-    <div class="author">
-        {{ image_tag('https://www.gravatar.com/avatar/27dd30e7355a2f2740b636da145c4903?s=256', {alt: "Cyril Nicodeme's avatar"}) }}
+    <h1 itemprop="headline">{{ page.title }}</h1>
+    <div class="author" itemscope itemtype="http://schema.org/Person" itemprop="author">
+        {{ image_tag('https://www.gravatar.com/avatar/27dd30e7355a2f2740b636da145c4903?s=256', {alt: "Cyril Nicodeme's avatar", itemprop: 'image'}) }}
         Written by
-        <span>Cyril Nicodeme</span>
+        <span itemprop="name">Cyril Nicodeme</span>
         on
-        <span><time datetime="{{ page.date }}">{{ full_date(page.date, "MMM D, YYYY") }}</time></span>
+        <span><time datetime="{{ page.date }}" itemprop="dateCreated datePublished">{{ full_date(page.date, "MMM D, YYYY") }}</time></span>
          - 
-        <span class="reading-time">{{ readingTime(page.content, 'min read') }}</span>
+        <span class="reading-time" itemprop="timeRequired">{{ readingTime(page.content, 'min read') }}</span>
     </div>
     {% if page.subtitle %}
     <h2 class="subtitle">{{ page.subtitle }}</h2>
     {% endif %}
-    <main>
+    <main itemprop="articleBody">
         {{ page.content }}
     </main>
-    <div class="pager">
+    <div class="pager" itemprop="pagination">
         <div>
         {% if page.next %}
             <a href="{{ url_for(page.next.path) }}" title="Read our next older post: {{ page.next.title }}">← Older Post</a>
@@ -42,18 +42,18 @@
         {% endif %}
         </div>
     </div>
-    <div class="about">
-        {{ image_tag('https://www.gravatar.com/avatar/27dd30e7355a2f2740b636da145c4903?s=256', {alt: "Cyril Nicodeme's avatar"}) }}
+    <div class="about" itemscope itemtype="http://schema.org/Person" itemprop="author">
+        {{ image_tag('https://www.gravatar.com/avatar/27dd30e7355a2f2740b636da145c4903?s=256', {alt: "Cyril Nicodeme's avatar", itemprop: 'image'}) }}
         <div>
             <h5>About the author<h5>
             <p>
-                Cyril Nicodeme is the CEO &amp; Founder of <a href="https://pdfshift.io" target="_blank">PDFShift.io</a>, a simple, efficient and high-fidelity HTML to PDF conversion API.<br />
+                <span itemprop="name">Cyril Nicodeme</span> is the CEO &amp; Founder of <a href="https://pdfshift.io" target="_blank" itemprop="affiliation">PDFShift.io</a>, a simple, efficient and high-fidelity HTML to PDF conversion API.<br />
             </p>
         </div>
     </div>
 </article>
 {% if theme.disqus %}
-<div class="disqus-comments">
+<div class="disqus-comments" itemprop="comment">
     <div class="comments">
         <div id="disqus_thread"></div>
     </div>

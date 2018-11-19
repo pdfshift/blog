@@ -4,26 +4,26 @@
     <div class="home">
         <div class="featured">
             <h4>Featured post</h4>
-            <div>
+            <div itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
                 {% set featured_post = site.posts.last() %}
                 <a href="{{ url_for(featured_post.path) }}" title="{{ featured_post.title }}">
-                    {% if featured_post.thumbnail %}{{ image_tag(featured_post.thumbnail, {alt: featured_post.title}) }}{% endif %}
+                    {% if featured_post.thumbnail %}{{ image_tag(featured_post.thumbnail, {alt: featured_post.title, itemprop: 'image'}) }}{% endif %}
                     <h2>{{ featured_post.title }}</h2>
                 </a>
             </div>
         </div>
         {% if site.categories.length %}
         <nav>
-            <ul>
+            <ul itemscope="itemscope" itemtype="http://schema.org/SiteNavigationElement">
                 {% set parent = {'$exists': false} %}
-                <li><a href="{{ config.root }}" title="Most recent">Most recent</a></li>
+                <li><a href="{{ config.root }}" title="Most recent" itemprop="name">Most recent</a></li>
                 {% for category in site.categories.find({'parent': parent}).sort('name').toArray() %}
-                <li><a href="{{ url_for(category.path) }}" title="{{ category.name }}">{{ category.name }}</a></li>
+                <li><a href="{{ url_for(category.path) }}" title="{{ category.name }}" itemprop="name">{{ category.name }}</a></li>
                 {% endfor %}
             </ul>
         </nav>
         {% endif %}
-        <section>
+        <section itemscope itemtype="http://schema.org/Blog">
             {% if page.next %}
                 <div class="pager">
                     <a href="{{ url_for('/' + config.pagination_dir + '/' + page.next) }}" title="← Back to latest posts">← Back to latest posts</a>
@@ -32,10 +32,10 @@
             <ul>
                 {% for post in page.posts.toArray() %}
                 <li>
-                    <a href="{{ url_for(post.path) }}" title="{{ post.title | replace('<br />', ' ') | striptags }}">
+                    <a href="{{ url_for(post.path) }}" title="{{ post.title | replace('<br />', ' ') | striptags }}" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
                         <div>
                             <div class="thumbnail">
-                                {% if post.thumbnail %}{{ image_tag(post.thumbnail) }}{% endif %}
+                                {% if post.thumbnail %}{{ image_tag(post.thumbnail, {alt: post.title, itemprop: 'image'}) }}{% endif %}
                             </div>
                             <div class="details">
                                 <h2>{{ post.title | replace('<br />', ' ') | striptags }}</h2>

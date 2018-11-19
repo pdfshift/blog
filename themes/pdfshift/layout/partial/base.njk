@@ -5,9 +5,9 @@
         <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         {% if theme.favicon %}<link rel="icon" href="{{ url_for(theme.favicon) }}">{% endif %}
-        <title>{{ (page.title  + " - " + config.title) if page.title else config.title }}</title>
-        <meta name="description" content="{{ page.excerpt | striptags if page.excerpt else config.description }}">
-        <meta name="author" content="{{ config.author }}">
+        <title itemprop="name">{{ (page.title  + " - " + config.title) if page.title else config.title }}</title>
+        <meta name="description" itemprop="description" content="{{ page.excerpt | striptags if page.excerpt else config.description }}">
+        <meta name="author" itemprop="author" content="{{ config.author }}">
         <meta name="keywords" content="{{ (page.keywords + "," + config.keywords) if page.keywords else config.keywords }}">
         <link rel="alternate" type="application/rss+xml" title="{{ config.title }}" href="{{ url_for(theme.feed) }}" />
         {% if is_post() %}<link rel="canonical" href="{{ page.permalink }}" />{% endif %}
@@ -21,14 +21,14 @@
         <link rel="stylesheet" href="{{ url_for('/assets/css/main.css') }}"/>
         {% include './head/google-analytics.njk' %}
     </head>
-    <body>
+    <body itemscope itemtype="http://schema.org/WebPage">
         <header class="container">
             <div class="row">
-                <a href="{{ config.root }}" alt="Return to our blog homepage.">PDFShift</a>
+                <a href="{{ config.root }}" alt="Return to our blog homepage." itemprop="name">PDFShift</a>
                 <nav>
-                    <ul>
+                    <ul itemscope itemtype="http://schema.org/SiteNavigationElement">
                         {% for menu in theme.menu %}
-                        <li><a href="{{ menu.url }}"{% if (menu.class) %} class="{{ menu.class }}"{% endif %}>{{ menu.name }}</a></li>
+                        <li><a href="{{ menu.url }}"{% if (menu.class) %} class="{{ menu.class }}"{% endif %} itemprop="name">{{ menu.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </nav>
