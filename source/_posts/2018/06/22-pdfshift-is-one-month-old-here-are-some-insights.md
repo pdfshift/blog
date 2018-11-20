@@ -14,7 +14,7 @@ So today, for its monthversary, I want to share with you the current state of th
 
 Maybe the first interesting thing to start talking about. We haven't made a big impact, nor got featured on big websites (ProductHunt, Hacker News, etc), but we had a pretty nice traffic still:
 
-![Visitors during the last month](/content/2018/06/22/analytics.png)
+[![Visitors during the last month](/content/2018/06/22/analytics.png)](/content/2018/06/22/analytics.png)
 
 __Nice Trick No. 1__: On Google Analytics, one thing I did that was ABSOLUTELY useful, was to __set up an objective that tracks users that registered__. Once I did that, I was able to know which source converted better.
 
@@ -22,7 +22,7 @@ __Nice Trick No. 1__: On Google Analytics, one thing I did that was ABSOLUTELY u
 
 Here are the results:
 
-![Best converting sources](/content/2018/06/22/sources.png)
+[![Best converting sources](/content/2018/06/22/sources.png)](/content/2018/06/22/sources.png)
 
 This table helps me output the main three important sites for me:
 
@@ -39,7 +39,7 @@ __Nice Trick No. 2__: Quora is really a helpful site to reference your service o
 
 This is one of my proudest achievement in one month. __We got over 200 new users!__
 
-![Users creation per day for the last 30 days](/content/2018/06/22/accounts.png)
+[![Users creation per day for the last 30 days](/content/2018/06/22/accounts.png)](/content/2018/06/22/accounts.png)
 
 __Nice Trick No. 3__: You should track your data, like users subscriptions and more on your server side, because more and more users are blocking scripts like Google Analytics. We use [Amplitude](https://amplitude.com) for this. It's free for too many requests ;)
 
@@ -49,7 +49,7 @@ Being an API dedicated to converting HTML to PDF, it's logical to talk about the
 
 __We converted 2000 documents__ in that time, including 1180 for real purpose (not testing). That's not bad at all!
 
-![Daily number of conversions](/content/2018/06/22/conversions.png)
+[![Daily number of conversions](/content/2018/06/22/conversions.png)](/content/2018/06/22/conversions.png)
 
 Again, we can see that starting from June 3, we got more and more conversions.
 
@@ -57,7 +57,7 @@ Again, we can see that starting from June 3, we got more and more conversions.
 
 This was the least expected event of this month. We got our first customer! I already {% post_link "from-0-to-9-mrr-in-20-days" "talked about it on a previous article" %} but there something you don't know ... :)
 
-![My first payment on Stripe!](/content/2018/06/22/stripe.png)
+[![My first payment on Stripe!](/content/2018/06/22/stripe.png)](/content/2018/06/22/stripe.png)
 
 __The payment system was not in place at all.__
 

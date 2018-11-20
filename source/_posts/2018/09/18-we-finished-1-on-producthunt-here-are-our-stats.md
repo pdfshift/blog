@@ -26,7 +26,7 @@ Since our previous post was about preparing a PH release, we thought it would be
 Since PDFShift is not new, we had almost 1000 users on our database. Of course, not all of them are active users, but it was consequent enough to leverage that.
 As per the ProductHunt rule, we didn't ask for upvotes but notified our users that we were live on ProductHunt.
 
-![Our Intercom campaign](/content/2018/09/18/intercom.png)
+[![Our Intercom campaign](/content/2018/09/18/intercom.png)](/content/2018/09/18/intercom.png)
 
 From the 945 emails we sent, 36% of our users opened it (not that bad) and 9% clicked. This means __85 users went to see our ProductHunt profile__.
 Unfortunately, we don't have a way to know how many of them clicked on the upvote button, but it's fair to assume that a good percentage of them did it (the difficult bit was done).
@@ -89,7 +89,7 @@ Of course, that was bound to fail, but if he would have responded, we would have
 
 ### Google Analytics
 
-![A surge of visitors on Tuesday](/content/2018/09/18/analytics.png)
+[![A surge of visitors on Tuesday](/content/2018/09/18/analytics.png)](/content/2018/09/18/analytics.png)
 
 What was the result of being #1 on ProductHunt? We got a lot of visitors:
 
@@ -102,7 +102,7 @@ And a slow decline since then. We are averaging now at around 200 visitors per d
 
 ### Visitors => Users
 
-![Users subscription](/content/2018/09/18/users.png)
+[![Users subscription](/content/2018/09/18/users.png)](/content/2018/09/18/users.png)
 
 Before our ProductHunt launch, we were averaging at about 10 new users per day.
 
@@ -120,7 +120,7 @@ But we clearly got a conversion rate that has accelerated since before, so that'
 
 ### Conversions
 
-![Number of conversions per day](/content/2018/09/18/conversions.png)
+[![Number of conversions per day](/content/2018/09/18/conversions.png)](/content/2018/09/18/conversions.png)
 
 We easily doubled the number of conversions we do per day and peaked at 4000 conversions on Tuesday. The best thing about it was that our server worked like a charm and we didn't have any crash related to the peak, so we are ready to expand more :)
 
