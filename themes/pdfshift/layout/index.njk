@@ -4,10 +4,10 @@
     <div class="home">
         <div class="featured">
             <h4>Featured post</h4>
-            <div itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
+            <div>
                 {% set featured_post = site.posts.last() %}
                 <a href="{{ url_for(featured_post.path) }}" title="{{ featured_post.title }}">
-                    {% if featured_post.thumbnail %}{{ image_tag(featured_post.thumbnail, {alt: featured_post.title, itemprop: 'image'}) }}{% endif %}
+                    {% if featured_post.thumbnail %}{{ image_tag(featured_post.thumbnail, {alt: featured_post.title}) }}{% endif %}
                     <h2>{{ featured_post.title }}</h2>
                 </a>
             </div>
@@ -38,9 +38,11 @@
                                 {% if post.thumbnail %}{{ image_tag(post.thumbnail, {alt: post.title, itemprop: 'image'}) }}{% endif %}
                             </div>
                             <div class="details">
-                                <h2>{{ post.title | replace('<br />', ' ') | striptags }}</h2>
-                                <span>Posted on {{ full_date(post.date, "MMM D, YYYY") }}</span>
+                                <h2 itemprop="headline">{{ post.title | replace('<br />', ' ') | striptags }}</h2>
+                                <span itemprop="datePublished dateModified">Posted on {{ full_date(post.date, "MMM D, YYYY") }}</span>
                                 <p>{{ truncate(post.excerpt | striptags, {length: 150, separator: ' '}) }}</p>
+                                <meta itemprop="mainEntityOfPage" content="{{ post.permalink if post.permalink else config.url }}" />
+                                <meta itemprop="inLanguage" content="en">
                             </div>
                         </div>
                     </a>

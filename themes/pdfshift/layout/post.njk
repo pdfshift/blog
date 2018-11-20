@@ -2,24 +2,32 @@
 
 {% block content %}
 <article itemscope itemtype="http://schema.org/BlogPosting">
-    <ul class="breadcrumb" itemprop="breadcrumb">
-        <li><a href="{{ config.url }}" itemprop="name">Blog</a></li>
-        <li><a href="{{ url_for(page.categories.first().path) }}" itemprop="name">{{ page.categories.first().name }}</a></li>
+    <link itemprop="mainEntityOfPage" href="{{ page.permalink if page.permalink else config.url }}" />
+    <meta itemprop="inLanguage" content="en">
+    <ul class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ config.url }}" itemprop="item"><span itemprop="name">Blog</span></a>
+            <meta itemprop="position" content="1">
+        </li>
+        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="{{ url_for(page.categories.first().path) }}" itemprop="item"><span itemprop="name">{{ page.categories.first().name }}</span></a>
+            <meta itemprop="position" content="2">
+        </li>
     </ul>
     {% if page.thumbnail %}
     <div class="thumbnail">
-        {{ image_tag(page.thumbnail, {alt: page.title, itemprop: 'image'}) }}
+        {{ image_tag(page.thumbnail, {alt: page.title, itemprop: 'thumbnailUrl image', itemscope: '', itemtype: 'http://schema.org/ImageObject'}) }}
     </div>
     {% endif %}
-    <h1 itemprop="headline">{{ page.title }}</h1>
+    <h1 itemprop="headline name">{{ page.title }}</h1>
     <div class="author">
-        <span itemscope itemtype="http://schema.org/Person" itemprop="publisher author">
+        <span itemscope itemtype="http://schema.org/Person" itemprop="author">
         {{ image_tag('https://www.gravatar.com/avatar/27dd30e7355a2f2740b636da145c4903?s=256', {alt: "Cyril Nicodeme's avatar", itemprop: 'image'}) }}
         Written by
         <span itemprop="name">Cyril Nicodeme</span>
         </span>
         on
-        <span><time datetime="{{ date_xml(page.date) }}" itemprop="dateCreated datePublished">{{ full_date(page.date, "MMM D, YYYY") }}</time></span>
+        <span><time datetime="{{ date_xml(page.date) }}" itemprop="dateCreated datePublished dateModified">{{ full_date(page.date, "MMM D, YYYY") }}</time></span>
          - 
         <span class="reading-time" itemprop="timeRequired">{{ readingTime(page.content, 'min read') }}</span>
     </div>
@@ -44,12 +52,12 @@
         {% endif %}
         </div>
     </div>
-    <div class="about" itemscope itemtype="http://schema.org/Person" itemprop="publisher author">
+    <div class="about" itemscope itemtype="http://schema.org/Person" itemprop="author">
         {{ image_tag('https://www.gravatar.com/avatar/27dd30e7355a2f2740b636da145c4903?s=256', {alt: "Cyril Nicodeme's avatar", itemprop: 'image'}) }}
         <div>
             <h5>About the author<h5>
             <p>
-                <span itemprop="name">Cyril Nicodeme</span> is the CEO &amp; Founder of <a href="https://pdfshift.io" target="_blank" itemprop="affiliation">PDFShift.io</a>, a simple, efficient and high-fidelity HTML to PDF conversion API.<br />
+                <span itemprop="name">Cyril Nicodeme</span> is the CEO &amp; Founder of <a href="https://pdfshift.io" target="_blank" itemprop="affiliation" itemscope itemtype="http://schema.org/Organization">PDFShift.io</a>, a simple, efficient and high-fidelity HTML to PDF conversion API.<br />
             </p>
         </div>
     </div>
